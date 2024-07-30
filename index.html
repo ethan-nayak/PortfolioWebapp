@@ -13,9 +13,47 @@
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#projects">Projects</a></li>
             </ul>
         </div>
     </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Ethan Nayak</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <ul>
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <!--HERE IS THE CODE FOR A PROFILE PICTURE SKIP FOR NOW-->
+        <!--div class="section__pic-container">
+            <img src="./Pictures" alt=""-->
+        </div>
+        <div class="section_text">
+            <p class="section__text__p1">Hello, I'm </p>
+            <h1 class="title">Ethan Nayak</h1>
+            <p class="section__text__p2">Undergraduate Student</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2"
+                    onclick="window.open('https://docs.google.com/document/d/1iYc49hf9G3lFzqpg-6c0Q0n5qHSGUPNeN8g22QUS9EE/edit?usp=sharing')">
+                    Download CV
+                </button>
+            </div>
+        </div>
+    </section>
+    
     <script src="script.js"></script>
 </body>
 </html>
+
