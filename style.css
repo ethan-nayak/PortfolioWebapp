@@ -88,7 +88,7 @@ a:hover {
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: rgb(255, 0, 0);
     transition: all 0.3 ease-in-out;
 }
 
@@ -107,7 +107,7 @@ a:hover {
     display: block;
     padding: 10px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     color:black;
     text-decoration: none;
     transition: all 0.3 ease-in-out;
@@ -142,3 +142,138 @@ a:hover {
 }
 
 /* SECTIONS */
+
+seciton {
+    padding-top: 4wh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container, #profile {
+    display: flex;
+    justify-content: center;
+    gap: 5 rem;
+    height: 80vh;
+}
+
+.section-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    text-align: center;
+}
+
+.section__text__p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* ICONs */
+
+.icon {
+    cursor: pointer;
+    height: 3rem;
+}
+
+/* Buttons */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 3rem;
+
+}
+
+.btn-color-1,
+.btn-color-2 {
+    border:rgb(53,53,53) 0.1rem solid
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+    background: rgb(53,53,53);
+    color: white;
+}
+
+.btn-color-1:hover {
+    background:#c8e5ff;
+}
+
+.btn-color-2 {
+    background: none;
+}
+
+.btn-color-2:hover {
+    border: #c8e5ff 0.1rem solid
+}
+
+.btn-container {
+    gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content horizontally */
+    border: 25px solid #000; /* Border width and color */
+    border-radius: 5rem; /* Rounded corners */
+    background-color: #c8e5ff; /* Background color */
+    padding: 2rem; /* Padding inside the border */
+    width: 70%; /* Width of the section */
+    max-width: 1200px; /* Max width of the section */
+    margin: 0 auto; /* Center the section horizontally */
+}
+
+.text-container {
+    text-align: center; /* Center-align text */
+    width: 100%; /* Increase width to allow more words per line */
+}
+
+.text-container p {
+    font-size: 1.15rem; /* Font size for readability */
+    line-height: 1.6; /* Adjust line height for better readability */
+    margin: 1 auto; /* Center paragraph within its container */
+    max-width: 100%; /* Ensure the paragraph uses full width of container */
+}
