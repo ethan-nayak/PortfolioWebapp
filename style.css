@@ -51,10 +51,10 @@ a{
 }
 
 a:hover {
-    color: darkgray;
+    color: rgb(169, 169, 169);
     text-decoration: underline;
-    text-underline-offset:1.25rem;
-    text-decoration-color: rgb(169, 169, 169);
+    text-underline-offset:1rem;
+    text-decoration-color: rgb(0, 0, 0);
 }
 
 .logo {
