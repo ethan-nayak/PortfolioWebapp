@@ -292,3 +292,30 @@ seciton {
     transform: translateY(-5px); /* Slight upward movement on hover */
 }
 
+/* SKILLS SECTION */
+
+.skills-details-container {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    align-items: center;
+    margin-top: 2rem; /* Space above the icons */
+}
+
+.skills-row {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    gap: 3rem; /* Space between icons */
+    margin-bottom: 2rem; /* Space between rows */
+}
+
+.skill-icon {
+    width: 80px; /* Consistent width */
+    height: 80px; /* Consistent height */
+    object-fit: contain; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.skill-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
