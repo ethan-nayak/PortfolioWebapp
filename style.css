@@ -257,7 +257,7 @@ seciton {
     display: flex; /* Enable flexbox layout */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center content horizontally */
-    border: 25px solid #000; /* Border width and color */
+    border: 10px solid #000; /* Border width and color */
     border-radius: 5rem; /* Rounded corners */
     background-color: #c8e5ff; /* Background color */
     padding: 2rem; /* Padding inside the border */
@@ -265,7 +265,9 @@ seciton {
     max-width: 1200px; /* Max width of the section */
     margin: 0 auto; /* Center the section horizontally */
     position: relative; /* Ensure the arrow is positioned relative to this section */
+    margin-bottom: 4rem; /* Add space below the About section */
 }
+
 
 .text-container {
     text-align: center; /* Center-align text */
@@ -293,29 +295,50 @@ seciton {
 }
 
 /* SKILLS SECTION */
+#skills {
+    display: flex;
+    flex-direction: column;
+    margin: 10rem 10%; /* Adjust the top margin to push it down from the About section */
+}
+
+.skills-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem; /* Space between header and icons */
+}
+
+.section__text__p1 {
+    font-size: 1.5rem;
+    margin-right: 1rem; /* Space between text and header */
+}
+
+.title {
+    font-size: 2.5rem; /* Adjust size as needed */
+    margin: 0; /* Remove default margin */
+}
 
 .skills-details-container {
     display: flex;
-    flex-direction: column; /* Stack rows vertically */
-    align-items: center;
-    margin-top: 2rem; /* Space above the icons */
+    flex-direction: column;
+    align-items: center; /* Center align the icons */
 }
 
 .skills-row {
     display: flex;
     justify-content: center; /* Center icons horizontally */
-    gap: 3rem; /* Space between icons */
+    gap: 1rem; /* Space between icons */
     margin-bottom: 2rem; /* Space between rows */
 }
 
 .skill-icon {
-    width: 80px; /* Consistent width */
-    height: 80px; /* Consistent height */
+    width: 70px; /* Smaller size for icons */
+    height: 70px; /* Consistent height */
     object-fit: contain; /* Maintain aspect ratio */
-    transition: transform 0.3s ease; /* Smooth transition on hover */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth transition on hover */
+    border: 2px solid transparent; /* Border color */
 }
 
 .skill-icon:hover {
     transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    background-color: #c8e5ff; /* Background color on hover */
 }
-
