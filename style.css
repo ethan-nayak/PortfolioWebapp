@@ -264,6 +264,7 @@ seciton {
     width: 70%; /* Width of the section */
     max-width: 1200px; /* Max width of the section */
     margin: 0 auto; /* Center the section horizontally */
+    position: relative; /* Ensure the arrow is positioned relative to this section */
 }
 
 .text-container {
@@ -276,4 +277,17 @@ seciton {
     line-height: 1.6; /* Adjust line height for better readability */
     margin: 1 auto; /* Center paragraph within its container */
     max-width: 100%; /* Ensure the paragraph uses full width of container */
+}
+
+.arrow {
+    position: absolute;
+    right: -7rem; /* Position outside the right border */
+    bottom: 1rem; /* Position outside the bottom border */
+    cursor: pointer;
+    height: 3.25rem; /* Ensure the size of the arrow is appropriate */
+    transition: all 300ms ease;
+}
+
+.arrow:hover {
+    transform: translateY(-5px); /* Slight upward movement on hover */
 }
