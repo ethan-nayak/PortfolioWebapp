@@ -284,10 +284,11 @@ seciton {
     right: -7rem; /* Position outside the right border */
     bottom: 1rem; /* Position outside the bottom border */
     cursor: pointer;
-    height: 3.25rem; /* Ensure the size of the arrow is appropriate */
+    height: 3rem; /* Ensure the size of the arrow is appropriate */
     transition: all 300ms ease;
 }
 
 .arrow:hover {
     transform: translateY(-5px); /* Slight upward movement on hover */
 }
+
