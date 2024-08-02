@@ -88,7 +88,7 @@ a:hover {
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color:#c8e5ff;
+    background-color:rgb(0, 0, 0);
     transition: all 0.3 ease-in-out;
 }
 
@@ -142,86 +142,71 @@ a:hover {
 }
 
 /* SECTIONS */
-
-seciton {
-    padding-top: 4wh;
+section {
+    padding-top: 4vh;
     height: 96vh;
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
+    text-align: center; /* Center text and elements inside section */
 }
 
-.section-container, #profile {
+/* Picture Container */
+.section__pic-container {
     display: flex;
     justify-content: center;
-    gap: 5 rem;
-    height: 80vh;
+    margin-bottom: 2rem; /* Space between picture and text */
 }
 
-.section-container {
-    display: flex;
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
+/* Picture */
+.section__pic-container img {
+    width: auto; /* Adjust width if necessary */
+    height: auto; /* Adjust height if necessary */
+    max-width: 500px; /* Adjust max-width if necessary */
+    border-radius: 50%; /* Optional: to make the image circular */
 }
 
-.section__text {
-    align-self: center;
-    text-align: center;
+/* Text Container */
+.section_text {
+    margin-bottom: 4rem; /* Space between text and buttons */
 }
 
-.section__text p {
-    font-weight: 600;
-}
-
+/* Text Styling */
 .section__text__p1 {
-    text-align: center;
-}
-
-.section__text__p2 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
+    font-size: 2rem; /* Increase font size for better visibility */
+    margin: 0;
 }
 
 .title {
-    font-size: 3rem;
-    text-align: center;
+    font-size: 4rem; /* Increase font size for emphasis */
+    margin: 0;
 }
 
-#socials-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
+.section__text__p2 {
+    font-size: 2rem; /* Increase font size for consistency */
+    margin-top: 0.5rem; /* Reduce margin-top to bring it closer to the title */
+    margin-bottom: 2rem; /* Add space between the paragraph and the buttons */
 }
 
-/* ICONs */
-
-.icon {
-    cursor: pointer;
-    height: 3rem;
-}
-
-/* Buttons */
-
+/* Buttons Container */
 .btn-container {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-bottom: 3rem; /* Space between buttons and social icons */
 }
 
+/* Buttons */
 .btn {
-    font-weight: 600;
+    font-weight: 600; /* Adjusted to a more reasonable value */
     transition: all 300ms ease;
     padding: 1rem;
-    width: 8rem;
     border-radius: 3rem;
-
 }
 
 .btn-color-1,
 .btn-color-2 {
-    border:rgb(53,53,53) 0.1rem solid
+    border: rgb(53, 53, 53) 0.1rem solid;
 }
 
 .btn-color-1:hover,
@@ -231,12 +216,12 @@ seciton {
 
 .btn-color-1,
 .btn-color-2:hover {
-    background: rgb(53,53,53);
+    background: rgb(53, 53, 53);
     color: white;
 }
 
 .btn-color-1:hover {
-    background:#c8e5ff;
+    background: #c8e5ff;
 }
 
 .btn-color-2 {
@@ -244,11 +229,21 @@ seciton {
 }
 
 .btn-color-2:hover {
-    border: #c8e5ff 0.1rem solid
+    border: #c8e5ff 0.1rem solid;
 }
 
-.btn-container {
-    gap: 1rem;
+/* Social Icons Container */
+#socials-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Space between icons */
+}
+
+/* Social Icons */
+.icon {
+    cursor: pointer;
+    height: 3rem; /* Adjust height for smaller icons */
+    width: 3rem; /* Adjust width to match height */
 }
 
 /* ABOUT SECTION */
@@ -257,17 +252,13 @@ seciton {
     display: flex; /* Enable flexbox layout */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center content horizontally */
-    border: 10px solid #000; /* Border width and color */
-    border-radius: 5rem; /* Rounded corners */
-    background-color: #c8e5ff; /* Background color */
     padding: 2rem; /* Padding inside the border */
     width: 70%; /* Width of the section */
     max-width: 1200px; /* Max width of the section */
     margin: 0 auto; /* Center the section horizontally */
     position: relative; /* Ensure the arrow is positioned relative to this section */
-    margin-bottom: 4rem; /* Add space below the About section */
+    margin-bottom: 6rem; /* Add space below the About section */
 }
-
 
 .text-container {
     text-align: center; /* Center-align text */
