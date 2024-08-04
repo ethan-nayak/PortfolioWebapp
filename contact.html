@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<!-- Desktop Navigation -->
+<nav id="desktop-nav">
+    <div class="logo">Ethan Nayak</div>
+    <div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hamburger Navigation -->
+<nav id="hamburger-nav">
+    <div class="logo">Ethan Nayak</div>
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links">
+            <ul>
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+    <div class="contact-container">
+        <img src="./Pictures/contact.png" alt="Contact" class="contact-image"/>
+        <div class="contact-text">
+            <h1 class="title">Contact Info</h1>
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container">
+                    <img src="./Pictures/email.png" alt="Email icon" class="icon contact-icon email-icon"/>
+                    <p><a href="mailto:ethananayak@gmail.com">ethananayak@gmail.com</a></p>
+                </div>
+                <div class="contact-info-container">
+                    <img src="./Pictures/linkedin.png" alt="LinkedIn icon" class="icon contact-icon linkedin-icon"/>
+                    <p><a href="https://www.linkedin.com/in/ethan-nayak/">LinkedIn.com</a></p>
+                </div>
+            </div>
+            <p class="section__text__p1">Backup email: ethan.nayak@icloud.com</p>
+
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Hamburger Menu -->
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector(".menu-links");
+        const icon = document.querySelector(".hamburger-icon");
+        menu.classList.toggle("open");
+        icon.classList.toggle("open");
+    }
+
+    function setActiveLink() {
+        const links = document.querySelectorAll('.nav-links a, .menu-links a');
+        const currentPath = window.location.pathname.split('/').pop();
+        links.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+
+    // Call the function on page load
+    window.onload = setActiveLink;
+</script>
+</body>
+</html>

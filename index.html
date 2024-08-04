@@ -3,46 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Page Title</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
+    <script src="script.js" defer></script> <!-- Ensure this file is correctly linked -->
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Ethan Nayak</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#projects">Projects</a></li>
+<!-- Desktop Navigation -->
+<nav id="desktop-nav">
+    <div class="logo">Ethan Nayak</div>
+    <div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li> <!-- Updated link -->
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hamburger Navigation -->
+<nav id="hamburger-nav">
+    <div class="logo">Ethan Nayak</div>
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links">
+            <ul>
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="index.html#about" onclick="toggleMenu()">About</a></li> <!-- Updated link -->
+                <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
             </ul>
         </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Ethan Nayak</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <ul>
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    </div>
+</nav>
+
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".menu-links");
+            const icon = document.querySelector(".hamburger-icon");
+            menu.classList.toggle("open");
+            icon.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
+
+
+
     <section id="profile">
         <!-- Profile Picture -->
         <div class="section__pic-container">
             <img src="./Pictures/memeoji.png" alt="Ethan Nayak profile picture">
         </div>
         <div class="section_text">
-            <p class="section__text__p1">Hello, I'm </p>
-            <h1 class="title">Ethan Nayak</h1>
+            <h1 class="title">Hello, I'm Ethan Nayak</h1>
             <p class="section__text__p2">Undergraduate Computer Science Student</p>
             <div class="btn-container">
                 <button class="btn btn-color-2"
@@ -50,10 +70,11 @@
                     Download CV
                 </button>
                 <button class="btn btn-color-1"
-                    onclick="location.href='./#contact'">
+                    onclick="location.href='./contact.html'">
                     Contact Info
                 </button>
-            </div>
+                </div>
+                
             <div id="socials-container">
                 <!-- LinkedIn Link and Icon -->
                 <img src="./Pictures/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/ethan-nayak/'"/>
@@ -62,6 +83,7 @@
             </div>
         </div>
     </section>
+
     <section id="about">
         <h1 class="title">About Me</h1>
         <div class="section-container">
@@ -71,11 +93,14 @@
                     <p>
                         I’m currently pursuing an undergraduate degree in computer science and am actively seeking professional opportunities. I consider myself a problem solver who is constantly striving to improve and expand my knowledge. I believe that learning is a continuous journey, and regardless of the environment, one should always stay updated with new advancements. I am looking forward to my next chapter!
                     </p>
-                
+                </div>
+            </div>
+        </div>
     </section>
+
     <section id="skills">
         <div class="skills-header">
-            <p class="section__text__p1">Explore my</p>
+            <p class="section__text__p1">Explore My</p>
             <h1 class="title">Skills</h1>
         </div>
         <div class="skills-details-container">
@@ -95,45 +120,96 @@
             </div>
         </div>
     </section>
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="skills-details-container">
-            <div class="details-container">
-                <div class="project-info">
-                    <div class="project-image">
-                        <img src="./Pictures/scarletexchange.png" alt="Project 1" class="project-img">
+
+    <div class="activity-wrapper">
+        <section id="activity">
+            <p class="section__text__p1">See My Latest</p>
+            <h1 class="title">Activity</h1>
+            <div class="skills-details-container">
+                <!-- Activity 1 -->
+                <div class="details-container">
+                    <div class="activity-info">
+                        <div class="activity-image">
+                            <img src="./Pictures/linkedinACTIVITYpic.avif" alt="Activity 3" class="activity-img">
+                        </div>
+                        <div class="activity-description">
+                            <h2 class="experience-sub-title activity-title">Connect with Me on LinkedIn</h2>
+                            <p>Come connect with me on LinkedIn! I am looking to meet new people and expand my network.</p>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 activity-btn" onclick="location.href='https://www.linkedin.com/in/ethan-nayak/'">
+                                    LinkedIn
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-description">
-                        <h2 class="experience-sub-title project-title">ScarletExchange</h2>
-                        <p>Mobile app that lets university students buy and sell items on campus. Designed using Figma for both low-fi and high-fi prototypes. Developed with React Native for the frontend, Flask for backend, and Firebase for data management.</p>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.figma.com/design/ejmsAGR0olef2nnqyCyU8y/scarlet-exchange?node-id=0-1/'">
-                                Figma
-                            </button>
+                </div>
+                
+                <!-- Activity 2 -->
+                <div class="details-container">
+                    <div class="activity-info">
+                        <div class="activity-image">
+                            <img src="./Pictures/project2.jfif" alt="Activity 2" class="activity-img">
+                        </div>
+                        <div class="activity-description">
+                            <h2 class="experience-sub-title activity-title">PortfolioWebapp</h2>
+                            <p>Explore the development process behind this portfolio website, crafted with HTML, CSS, and JavaScript. Click the link below to see a detailed walkthrough of how I created and designed the site!</p>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 activity-btn" onclick="location.href='https://github.com/ethan-nayak/PortfolioWebapp/blob/main/index.html'">
+                                    GitHub
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Activity 3 -->
+                <div class="details-container">
+                    <div class="activity-info">
+                        <div class="activity-image">
+                            <img src="./Pictures/scarletexchange.png" alt="Activity 1" class="activity-img">
+                        </div>
+                        <div class="activity-description">
+                            <h2 class="experience-sub-title activity-title">ScarletExchange</h2>
+                            <p>Mobile app that lets university students buy and sell items on campus. Designed using Figma for both low-fi and high-fi prototypes. Developed with React Native for the frontend, Flask for backend, and Firebase for data management.</p>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 activity-btn" onclick="location.href='https://www.figma.com/design/ejmsAGR0olef2nnqyCyU8y/scarlet-exchange?node-id=0-1/'">
+                                    Figma
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="details-container">
-                <div class="project-info">
-                    <div class="project-image">
-                        <img src="./Pictures/project2.jfif" alt="Project 2" class="project-img">
-                    </div>
-                    <div class="project-description">
-                        <h2 class="experience-sub-title project-title">PortfolioWebapp</h2>
-                        <p>Explore the development process behind this portfolio website, crafted with HTML, CSS, and JavaScript. Click the link below to see a detailed walkthrough of how I created and designed the site!</p>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ethan-nayak/PortfolioWebapp/blob/main/index.html'">
-                                GitHub
-                            </button>
-                        </div>
-                    </div>
-                </div>
+        </section>
+    </div>
+    
+
+    <section id="contact">
+        <p class="section__text__p1">Feel free to reach out!</p>
+        <h1 class="title">Contact Info</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./Pictures/email.png" alt="Email icon" class="icon contact-icon email-icon"/>
+                <p><a href="mailto:examplemail@gmail.com">ethananayak@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./Pictures/linkedin.png" alt="LinkedIn icon" class="icon contact-icon linkedin-icon"/>
+                <p><a href="https://www.linkedin.com/in/ethan-nayak/">LinkedIn.com</a></p>
             </div>
         </div>
     </section>
-    
-<script src="script.js"></script>
+
+    <section id="newsletter">
+        <div class="newsletter-container">
+            <h2 class="newsletter-title">Subscribe to my newsletter</h2>
+            <p class="newsletter-description">Stay updated with my latest activity. Not spam, just updates.
+            <form class="newsletter-form" action="YOUR_SERVER_SCRIPT_URL" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-newsletter">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
