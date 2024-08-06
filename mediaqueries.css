@@ -43,17 +43,23 @@ section {
         height: 83vh;
         margin-bottom: 6rem;
     }
+
+    .section__pic-container {
+        max-width: 300px; /* Increase max-width for larger screens */
+    }
 }
 
 /* Medium screens */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1400px) and (min-width: 1200px) {
     #profile {
         height: 83vh;
         margin-bottom: 6rem;
     }
+
     .about-containers {
         flex-wrap: wrap;
     }
+
     #contact,
     #projects {
         height: auto; /* Ensure containers are responsive */
@@ -61,94 +67,156 @@ section {
 }
 
 /* Smaller screens */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (min-width: 768px) {
     #desktop-nav {
         display: none;
     }
+
     #hamburger-nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 1rem;
     }
+
     .hamburger-menu {
         display: flex;
     }
+
     #experience,
     .experience-details-container {
         margin-top: 2rem;
     }
+
     #profile,
     .section-container {
         display: block;
     }
+
     section,
     .section-container {
         height: auto; /* Ensure sections are responsive */
     }
+
     .section__pic-container {
         width: 100%; /* Ensure responsiveness of image containers */
         max-width: 275px;
         height: auto;
     }
+
+    .about-containers {
+        margin-top: 0;
+    }
+}
+
+/* Adjustments for screens around 1100 x 700 px */
+@media screen and (max-width: 1100px) and (min-width: 768px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    #socials-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center align social icons */
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+
+    .icon {
+        width: 1.5rem; /* Adjust size for smaller screens */
+        height: 1.5rem; /* Adjust size for smaller screens */
+    }
+
+    footer {
+        padding: 1rem;
+        position: relative; /* Ensure footer does not overlap */
+    }
+
+    #contact {
+        margin-top: 2rem; /* Provide space above contact section */
+    }
+
     .about-containers {
         margin-top: 0;
     }
 }
 
 /* Mobile screens */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     #contact,
     footer {
         height: auto; /* Adjust height for better fitting */
         padding: 1rem; /* Add padding if needed */
     }
+
     #profile {
         height: auto; /* Adjust height to fit content */
         margin-bottom: 0;
     }
+
     article {
         font-size: 1rem;
     }
+
     footer nav {
         height: auto; /* Ensure footer nav is responsive */
         margin-bottom: 2rem;
     }
+
     .about-containers,
     .contact-info-upper-container,
     .btn-container {
         flex-wrap: wrap;
     }
+
     .contact-info-container {
         margin: 0;
     }
+
     .contact-info-container p,
     .nav-links li a {
         font-size: 1rem;
     }
+
     .experience-sub-title {
         font-size: 1.25rem;
     }
+
     .logo {
         font-size: 1.5rem;
     }
+
     #socials-container {
         display: flex;
         justify-content: center;
         gap: 0.5rem; /* Space between social icons */
         padding: 1rem 0; /* Add padding for spacing */
     }
+
     .icon {
         width: 1.5rem; /* Adjust size for smaller screens */
         height: 1.5rem; /* Adjust size for smaller screens */
     }
+
     footer {
         padding: 1rem; /* Adjust padding to match other elements */
     }
 }
 
-/* EXTRA/MISC */
-@media (max-width: 768px) {
+/* Extra/Miscellaneous for very small screens */
+@media screen and (max-width: 600px) {
     .newsletter-container {
         max-width: 90%; /* Adjust width for smaller screens */
         max-height: 300px; /* Adjust height for smaller screens */
