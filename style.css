@@ -50,9 +50,9 @@ a {
 }
 
 a:hover {
-    color: rgb(169, 169, 169);
+    color: #c8e5ff;
     text-decoration: underline;
-    text-underline-offset: 1rem;
+    text-underline-offset: 0.4rem;
 }
 
 .logo {
@@ -116,7 +116,7 @@ a:hover {
 }
 
 .menu-links a:hover {
-    text-shadow: 0 1px 3px rgb(0, 200, 255);
+    text-shadow: 0 1px 3px rgb(100, 200, 255);
 }
 
 .hamburger-icon.open span:first-child {
@@ -193,26 +193,21 @@ section {
     transition: all 300ms ease;
     padding: 1rem;
     border-radius: 3rem;
-}
-
-.btn-color-1,
-.btn-color-2 {
     border: rgb(53, 53, 53) 0.1rem solid;
 }
 
-.btn-color-1:hover,
-.btn-color-2:hover {
+.btn:hover {
     cursor: pointer;
-}
-
-.btn-color-1,
-.btn-color-2:hover {
     background: rgb(53, 53, 53);
     color: white;
 }
 
-.btn-color-1:hover {
+.btn-color-1 {
     background: #c8e5ff;
+}
+
+.btn-color-1:hover {
+    border: #c8e5ff 0.3rem solid;
 }
 
 .btn-color-2 {
@@ -220,8 +215,9 @@ section {
 }
 
 .btn-color-2:hover {
-    border: #c8e5ff 0.1rem solid;
+    border: #c8e5ff 0.3rem solid;
 }
+
 
 /* Social Icons Container */
 #socials-container {
@@ -230,12 +226,27 @@ section {
     gap: 1rem; /* Space between icons */
 }
 
-/* Social Icons */
+/* General icon styling */
 .icon {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    transition: all 0.3s ease; 
     cursor: pointer;
-    height: 3rem; 
-    width: 3rem; 
 }
+
+.icon:hover {
+    background-color: #c8e5ff; 
+    box-shadow: 0 0 5px #c8e5ff; 
+}
+
+
+/* Ensures that all icons have the same size */
+#socials-container img {
+    width: 50px; 
+    height: 50px; 
+}
+
 
 /* ABOUT SECTION */
 #about {
@@ -308,7 +319,7 @@ section {
     display: flex;
     flex-direction: column;
     margin: 2rem 10%; /* Adjusted margin to push it down from the About section */
-    margin-bottom: 27rem; /* Increased bottom margin to add more space below */
+    margin-bottom: 20rem; /* Increased bottom margin to add more space below */
 }
 
 .skills-header {
@@ -336,21 +347,20 @@ section {
 .skills-row {
     display: flex;
     justify-content: center; 
-    gap: 1rem; 
-    margin-bottom: 2rem; /* Space between rows */
+    gap: 5rem; /* Increased space between icons */
+    margin-bottom: 3rem; /* Space between rows */
 }
 
 .skill-icon {
-    width: 140px; /* Smaller size for icons */
-    height: 140px; 
+    width: 150px; /* Smaller size for icons */
+    height: 150px; 
     object-fit: contain; 
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid transparent;
 }
 
 .skill-icon:hover {
     transform: scale(1.5); /* Slightly enlarge the icon on hover */
-    background-color: #c8e5ff; 
 }
 
 /* PROJECT PAGE (NEW PAGE) */
@@ -457,7 +467,7 @@ section {
 
 /* Styling for the 2024 button */
 .btn-color-3 {
-    background-color: #007bff; 
+    background-color: #007BFF; 
     color: white; 
     border: none; 
     padding: 0.5rem 1rem; 
@@ -472,7 +482,7 @@ section {
 
 /* ACTIVITY SECTION */
 .activity-wrapper {
-    border: 2px solid #00b2ee; /* Light blue border, matching the activity section */
+    border: 2px solid #c8e5ff; /* Light blue border, matching the activity section */
     border-radius: 10px; /* Rounded corners for the border */
     padding: 1.5rem; 
     background-color: #ceecff; 
@@ -581,8 +591,6 @@ section {
     color: #ffffff; 
 }
 
-
-
 /* CONTACT */
 #contact {
     display: flex;
@@ -596,11 +604,9 @@ section {
     display: flex;
     justify-content: center; 
     align-items: center;
-    border-radius: 10rem;
-    border: 1px solid rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
+    background: #c8e5ff;
     margin: 2rem auto; 
-    padding: 1rem 1rem; 
+    padding: 3rem; /* Increased padding */
 }
 
 .contact-info-container {
@@ -619,77 +625,15 @@ section {
 }
 
 .email-icon {
-    height: 3rem; 
-    width: 3rem;  
+    height: 4rem;
+    width: 4rem;  
 }
 
 .linkedin-icon {
-    height: 2.5rem;
-    width: 2.5rem;
-}
-/* FOOTER */
-footer {
-    height: 26vh;
-    margin: 0 1rem;
+    height: 4rem;
+    width: 4rem;  
 }
 
-footer p {
-    text-align: center;
-}
-
-
-/* NEWSLETTER SECTION */
-#newsletter {
-    background-color: #f0f0f0;
-    padding: 1rem 35%;
-    text-align: center;
-    margin: 0rem 0;
-}
-
-.newsletter-container {
-    max-width: 800px;
-    max-height: 245px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.newsletter-title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.newsletter-description {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.newsletter-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.newsletter-form input {
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    width: 100%;
-    max-width: 400px;
-}
-
-.btn-newsletter {
-    background-color: #007BFF;
-    color: #ffffff;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 /* Contact Page Styles */
 .contact-container {
@@ -697,14 +641,14 @@ footer p {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 2rem;
+    padding: 3rem;
     background-color: #f5f5f5;
     text-align: center;
 }
 
 .contact-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -747,34 +691,48 @@ footer p {
 }
 
 .contact-info-container a {
-    color: #007bff;
-    text-decoration: none;
+    color: #000000;
 }
 
 .contact-info-container a:hover {
     text-decoration: underline;
 }
 
+/* FOOTER SECTION */
 
-
-
-/* Wrapper to contain all content and push footer to the bottom */
-.wrapper {
-    min-height: 100vh;
+footer {
+    padding: 40px 0; /* Adjust padding to bring the footer text closer */
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center items horizontally */
 }
 
-/* Main content area */
-.main-content {
-    flex: 1;
+footer #socials-container {
+    display: flex;
+    align-items: center;
+    gap: 28px; /* Space between icons */
+    margin-bottom: 5px; /* Reduce space between icons and footer text */
 }
 
-/* Footer styling */
-#footer {
-    padding: 1rem;
-    text-align: center;
-
+footer #socials-container .icon {
+    width: 40px; /* Icon size */
+    height: 40px; /* Icon size */
+    cursor: pointer;
+    transition: opacity 0.3s ease; /* Smooth hover effect */
 }
 
-/* Ensure the footer is always at the bottom of the page */
+footer #socials-container .icon:hover {
+    opacity: 0.7; /* Hover effect for icons */
+}
+
+footer p {
+    font-size: 17px; /* Font size for footer text */
+    margin: 0; /* Remove default margin */
+}
+
+/* Ensure no extra space below the footer */
+body::after {
+    content: "";
+    display: block;
+    height: 0; /* Ensures no extra space below the footer */
+}

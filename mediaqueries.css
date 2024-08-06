@@ -1,169 +1,179 @@
 /* General Styles */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 #profile {
-  height: 83vh;
-  margin-bottom: 6rem;
+    height: 83vh; /* Ensure this is flexible on small screens */
+    margin-bottom: 6rem;
 }
 
 .about-containers {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .section-container,
 section {
-  height: fit-content;
-  margin: 0 5%;
+    height: auto; /* Changed to auto for better responsiveness */
+    margin: 0 5%;
 }
 
 .section__pic-container {
-  width: 275px;
-  height: 275px;
-  margin: 0 auto 2rem;
+    width: 100%; /* Make sure the image container is responsive */
+    max-width: 275px; /* Set max width for larger screens */
+    height: auto; /* Adjust height for responsive images */
+    margin: 0 auto 2rem;
 }
 
 .btn-container {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-links {
-  display: flex;
-  gap: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
 }
 
 /* Large screens */
 @media screen and (min-width: 1400px) {
-  #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-  }
+    #profile {
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
 }
 
 /* Medium screens */
 @media screen and (max-width: 1400px) {
-  #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-  }
-  .about-containers {
-      flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-      height: fit-content;
-  }
+    #profile {
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+    .about-containers {
+        flex-wrap: wrap;
+    }
+    #contact,
+    #projects {
+        height: auto; /* Ensure containers are responsive */
+    }
 }
 
 /* Smaller screens */
 @media screen and (max-width: 1200px) {
-  #desktop-nav {
-      display: none;
-  }
-  #hamburger-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 1rem;
-  }
-  .hamburger-menu {
-      display: flex;
-  }
-  #experience,
-  .experience-details-container {
-      margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-      display: block;
-  }
-  section,
-  .section-container {
-      height: fit-content;
-  }
-  section {
-      margin: 0 5%;
-  }
-  .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-  }
-  .about-containers {
-      margin-top: 0;
-  }
+    #desktop-nav {
+        display: none;
+    }
+    #hamburger-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    .hamburger-menu {
+        display: flex;
+    }
+    #experience,
+    .experience-details-container {
+        margin-top: 2rem;
+    }
+    #profile,
+    .section-container {
+        display: block;
+    }
+    section,
+    .section-container {
+        height: auto; /* Ensure sections are responsive */
+    }
+    .section__pic-container {
+        width: 100%; /* Ensure responsiveness of image containers */
+        max-width: 275px;
+        height: auto;
+    }
+    .about-containers {
+        margin-top: 0;
+    }
 }
 
 /* Mobile screens */
 @media screen and (max-width: 600px) {
-  #contact,
-  footer {
-      height: 40vh;
-  }
-  #profile {
-      height: 83vh;
-      margin-bottom: 0;
-  }
-  article {
-      font-size: 1rem;
-  }
-  footer nav {
-      height: fit-content;
-      margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-      flex-wrap: wrap;
-  }
-  .contact-info-container {
-      margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-      font-size: 1rem;
-  }
-  .experience-sub-title {
-      font-size: 1.25rem;
-  }
-  .logo {
-      font-size: 1.5rem;
-  }
+    #contact,
+    footer {
+        height: auto; /* Adjust height for better fitting */
+        padding: 1rem; /* Add padding if needed */
+    }
+    #profile {
+        height: auto; /* Adjust height to fit content */
+        margin-bottom: 0;
+    }
+    article {
+        font-size: 1rem;
+    }
+    footer nav {
+        height: auto; /* Ensure footer nav is responsive */
+        margin-bottom: 2rem;
+    }
+    .about-containers,
+    .contact-info-upper-container,
+    .btn-container {
+        flex-wrap: wrap;
+    }
+    .contact-info-container {
+        margin: 0;
+    }
+    .contact-info-container p,
+    .nav-links li a {
+        font-size: 1rem;
+    }
+    .experience-sub-title {
+        font-size: 1.25rem;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    #socials-container {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem; /* Space between social icons */
+        padding: 1rem 0; /* Add padding for spacing */
+    }
+    .icon {
+        width: 1.5rem; /* Adjust size for smaller screens */
+        height: 1.5rem; /* Adjust size for smaller screens */
+    }
+    footer {
+        padding: 1rem; /* Adjust padding to match other elements */
+    }
 }
 
 /* EXTRA/MISC */
 @media (max-width: 768px) {
-  .newsletter-container {
-      max-width: 90%; /* Adjust width for smaller screens */
-      max-height: 300px; /* Adjust height for smaller screens */
-  }
-}
+    .newsletter-container {
+        max-width: 90%; /* Adjust width for smaller screens */
+        max-height: 300px; /* Adjust height for smaller screens */
+    }
 
-@media (max-width: 768px) {
-  .nav-links {
-      font-size: 1.2rem;
-  }
-  
-  .section__text__p1,
-  .section__text__p2 {
-      font-size: 1.2rem;
-  }
-  
-  .title {
-      font-size: 2rem;
-  }
-  
-  .skills-row,
-  .details-container {
-      flex-direction: column;
-  }
-  
-  .project-img,
-  .activity-img {
-      height: auto; /* Adjust height for smaller screens */
-  }
+    .nav-links {
+        font-size: 1.2rem;
+    }
+
+    .section__text__p1,
+    .section__text__p2 {
+        font-size: 1.2rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .skills-row,
+    .details-container {
+        flex-direction: column;
+    }
+
+    .project-img,
+    .activity-img {
+        height: auto; /* Adjust height for smaller screens */
+    }
 }
