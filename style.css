@@ -754,3 +754,27 @@ footer p {
 .contact-info-container a:hover {
     text-decoration: underline;
 }
+
+
+
+
+/* Wrapper to contain all content and push footer to the bottom */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1;
+}
+
+/* Footer styling */
+#footer {
+    padding: 1rem;
+    text-align: center;
+
+}
+
+/* Ensure the footer is always at the bottom of the page */
