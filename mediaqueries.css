@@ -2,10 +2,12 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Ensure vertical scrolling if needed */
 }
 
 #profile {
-    height: 83vh; /* Ensure this is flexible on small screens */
+    height: auto; 
     margin-bottom: 6rem;
 }
 
@@ -16,14 +18,14 @@ body {
 
 .section-container,
 section {
-    height: auto; /* Changed to auto for better responsiveness */
+    height: auto; 
     margin: 0 5%;
 }
 
 .section__pic-container {
-    width: 100%; /* Make sure the image container is responsive */
-    max-width: 275px; /* Set max width for larger screens */
-    height: auto; /* Adjust height for responsive images */
+    width: 100%; 
+    max-width: 275px; 
+    height: auto; 
     margin: 0 auto 2rem;
 }
 
@@ -40,7 +42,7 @@ section {
 /* Large screens */
 @media screen and (min-width: 1400px) {
     #profile {
-        height: 83vh;
+        height: auto;
         margin-bottom: 6rem;
     }
 
@@ -52,7 +54,7 @@ section {
 /* Medium screens */
 @media screen and (max-width: 1400px) and (min-width: 1200px) {
     #profile {
-        height: 83vh;
+        height: auto;
         margin-bottom: 6rem;
     }
 
@@ -62,7 +64,7 @@ section {
 
     #contact,
     #projects {
-        height: auto; /* Ensure containers are responsive */
+        height: auto; 
     }
 }
 
@@ -79,10 +81,6 @@ section {
         padding: 0 1rem;
     }
 
-    .hamburger-menu {
-        display: flex;
-    }
-
     #experience,
     .experience-details-container {
         margin-top: 2rem;
@@ -95,11 +93,11 @@ section {
 
     section,
     .section-container {
-        height: auto; /* Ensure sections are responsive */
+        height: auto; 
     }
 
     .section__pic-container {
-        width: 100%; /* Ensure responsiveness of image containers */
+        width: 100%; 
         max-width: 275px;
         height: auto;
     }
@@ -124,6 +122,8 @@ section {
 
     .hamburger-menu {
         display: flex;
+        align-items: center;
+        cursor: pointer;
     }
 
     #socials-container {
@@ -132,20 +132,22 @@ section {
         justify-content: center; /* Center align social icons */
         gap: 0.5rem;
         padding: 1rem 0;
+        margin-bottom: 1rem; 
     }
 
     .icon {
-        width: 1.5rem; /* Adjust size for smaller screens */
-        height: 1.5rem; /* Adjust size for smaller screens */
+        width: 1.5rem; 
+        height: 1.5rem; 
     }
 
     footer {
         padding: 1rem;
-        position: relative; /* Ensure footer does not overlap */
+        position: relative; 
+        clear: both; 
     }
 
     #contact {
-        margin-top: 2rem; /* Provide space above contact section */
+        margin-top: 2rem; 
     }
 
     .about-containers {
@@ -157,12 +159,13 @@ section {
 @media screen and (max-width: 768px) {
     #contact,
     footer {
-        height: auto; /* Adjust height for better fitting */
-        padding: 1rem; /* Add padding if needed */
+        height: auto; 
+        padding: 1rem; 
+        margin-top: 2rem; 
     }
 
     #profile {
-        height: auto; /* Adjust height to fit content */
+        height: auto; 
         margin-bottom: 0;
     }
 
@@ -171,7 +174,7 @@ section {
     }
 
     footer nav {
-        height: auto; /* Ensure footer nav is responsive */
+        height: auto; 
         margin-bottom: 2rem;
     }
 
@@ -201,47 +204,170 @@ section {
     #socials-container {
         display: flex;
         justify-content: center;
-        gap: 0.5rem; /* Space between social icons */
-        padding: 1rem 0; /* Add padding for spacing */
+        gap: 0.5rem;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
     }
-
+    
     .icon {
-        width: 1.5rem; /* Adjust size for smaller screens */
-        height: 1.5rem; /* Adjust size for smaller screens */
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    footer {
+        padding: 1rem;
+    }
+    
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+    .about-container h2,
+    .about-container p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .section-container {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .newsletter-container {
+            max-width: 90%;
+            max-height: 300px;
+        }
+    
+        .nav-links {
+            font-size: 1.2rem;
+        }
+    
+        .section__text__p1,
+        .section__text__p2 {
+            font-size: 1.2rem;
+            max-width: 90%;
+        }
+    
+        .title {
+            font-size: 2rem;
+        }
+    
+        .skills-row,
+        .details-container {
+            flex-direction: column;
+        }
+    
+        .project-img,
+        .activity-img {
+            height: auto;
+        }
     }
 
-    footer {
-        padding: 1rem; /* Adjust padding to match other elements */
+    /* Specific styles for the About section */
+    .about-section {
+        max-width: 90%;
+        margin: 0 auto; 
+        padding: 1rem; 
+    }
+
+    .about-section h1,
+    .about-section p {
+        font-size: 1.2rem; 
+    }
+
+    .section-container {
+        width: 100%;
     }
 }
 
-/* Extra/Miscellaneous for very small screens */
-@media screen and (max-width: 600px) {
-    .newsletter-container {
-        max-width: 90%; /* Adjust width for smaller screens */
-        max-height: 300px; /* Adjust height for smaller screens */
+/* Landscape specific adjustments for iPhone 12 Pro and iPhone 14 Pro Max */
+@media screen and (max-width: 844px) and (orientation: landscape), 
+       screen and (max-width: 932px) and (orientation: landscape) {
+    #profile,
+    .section-container {
+        height: auto; /* Ensure containers are flexible */
+        margin-bottom: 6rem;
     }
 
-    .nav-links {
-        font-size: 1.2rem;
+    .about-containers,
+    #contact,
+    footer {
+        margin: 0 auto;
+        width: 90%; 
     }
 
-    .section__text__p1,
-    .section__text__p2 {
-        font-size: 1.2rem;
+    .section__pic-container {
+        max-width: 275px; 
     }
 
-    .title {
-        font-size: 2rem;
+    #socials-container {
+        flex-wrap: nowrap; 
     }
 
-    .skills-row,
-    .details-container {
+    .icon {
+        width: 2rem;
+        height: 2rem; 
+    }
+
+    /* Additional styles for iPhone landscape */
+    .contact-info-upper-container,
+    #contact,
+    footer {
+        margin-top: 2rem;
+    }
+}
+
+/* FIX FOR SAMSUNG GALAXY S8+ PORTRAIT MODE */
+@media only screen and (min-width: 360px) and (max-width: 740px) and (orientation: portrait) {
+    .contact-container {
+      padding: 0 20px; 
+    }
+  
+    .contact-text {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%; 
+    }
+  
+    .contact-info-upper-container {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%; 
+    }
+  
+    .contact-info-container {
+      text-align: center;
+    }
+  
+    h1.title {
+      text-align: center;
+    }
+  }
+
+
+  /* FIXING SKILLS SECTION FOR MOBILE */
+@media screen and (max-width: 768px) {
+    #skills {
+        margin: 2rem 5%;
+    }
+
+    .skills-header {
         flex-direction: column;
+        align-items: flex-start;
     }
 
-    .project-img,
-    .activity-img {
-        height: auto; /* Adjust height for smaller screens */
+    .skills-row {
+        gap: 2rem; 
+    }
+
+    .skill-icon {
+        width: 100px; 
+        height: 100px;
     }
 }

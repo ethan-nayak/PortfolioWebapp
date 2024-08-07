@@ -318,8 +318,8 @@ section {
 #skills {
     display: flex;
     flex-direction: column;
-    margin: 2rem 10%; /* Adjusted margin to push it down from the About section */
-    margin-bottom: 20rem; /* Increased bottom margin to add more space below */
+    margin: 2rem 10%; 
+    margin-bottom: 20rem; 
 }
 
 .skills-header {
@@ -347,20 +347,23 @@ section {
 .skills-row {
     display: flex;
     justify-content: center; 
-    gap: 5rem; /* Increased space between icons */
-    margin-bottom: 3rem; /* Space between rows */
+    gap: 5rem; 
+    margin-bottom: 3rem; 
+    flex-wrap: wrap; 
 }
 
 .skill-icon {
-    width: 150px; /* Smaller size for icons */
+    width: 150px; 
     height: 150px; 
     object-fit: contain; 
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid transparent;
+    max-width: 100%; 
+    box-sizing: border-box;
 }
 
 .skill-icon:hover {
-    transform: scale(1.5); /* Slightly enlarge the icon on hover */
+    transform: scale(1.5); 
 }
 
 /* PROJECT PAGE (NEW PAGE) */
@@ -412,7 +415,7 @@ section {
 
 .project-img {
     width: 100%; 
-    height: 300px; 
+    height: 25%; 
     object-fit: cover; 
     border-radius: 8px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
@@ -544,7 +547,7 @@ section {
 
 .activity-img {
     width: 100%; 
-    height: 300px; 
+    height: 25%; 
     object-fit: cover; 
     border-radius: 8px; 
     box-shadow: 0 2px 4px rgba(0, 81, 255, 0.2); 
@@ -596,56 +599,26 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center all elements horizontally */
-    height: 70vh;
+    padding: 2rem; /* Add padding for better spacing */
     text-align: center; /* Center text */
 }
 
-.contact-info-upper-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    background: #c8e5ff;
-    margin: 2rem auto; 
-    padding: 3rem; /* Increased padding */
-}
-
-.contact-info-container {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin: 0 1rem; /* Adjust margin for spacing between items */
-}
-
-.contact-info-container p {
-    font-size: larger;
-}
-
-.contact-icon {
-    cursor: default;
-}
-
-
-
-.linkedin-icon {
-    height: 4rem;
-    width: 4rem;  
-}
-
-
-/* Contact Page Styles */
 .contact-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 3rem;
+    padding: 2rem; 
     background-color: #f5f5f5;
-    text-align: center;
+    width: 100%;
+    max-width: 800px; 
+    box-sizing: border-box; 
+    margin: 0 auto; 
 }
 
 .contact-image {
     width: 100%;
-    max-width: 1000px;
+    max-width: 800px; 
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -665,15 +638,22 @@ section {
 
 .contact-text .section__text__p1 {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem; /* Adjust margin-top */
     color: #666;
 }
 
 .contact-info-upper-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 1rem;
+    background: #c8e5ff;
+    padding: 2rem;
+    width: 100%; 
+    max-width: 800px; /* Max-width to prevent overflow */
+    margin: 2rem auto;
+    box-sizing: border-box;
 }
 
 .contact-info-container {
@@ -689,6 +669,7 @@ section {
 
 .contact-info-container a {
     color: #000000;
+    text-decoration: none;
 }
 
 .contact-info-container a:hover {
@@ -698,38 +679,38 @@ section {
 /* FOOTER SECTION */
 
 footer {
-    padding: 40px 0; /* Adjust padding to bring the footer text closer */
+    padding: 40px 0; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
+    align-items: center;
 }
 
 footer #socials-container {
     display: flex;
     align-items: center;
     gap: 28px; /* Space between icons */
-    margin-bottom: 5px; /* Reduce space between icons and footer text */
+    margin-bottom: 5px; 
 }
 
 footer #socials-container .icon {
-    width: 40px; /* Icon size */
-    height: 40px; /* Icon size */
+    width: 40px; 
+    height: 40px; 
     cursor: pointer;
-    transition: opacity 0.3s ease; /* Smooth hover effect */
+    transition: opacity 0.3s ease; 
 }
 
 footer #socials-container .icon:hover {
-    opacity: 0.7; /* Hover effect for icons */
+    opacity: 0.7; 
 }
 
 footer p {
     font-size: 17px; /* Font size for footer text */
-    margin: 0; /* Remove default margin */
+    margin: 0; 
 }
 
 /* Ensure no extra space below the footer */
 body::after {
     content: "";
     display: block;
-    height: 0; /* Ensures no extra space below the footer */
+    height: 0;
 }
