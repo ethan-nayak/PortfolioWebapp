@@ -1,4 +1,4 @@
-/* General Styles */
+* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -157,6 +157,60 @@ section {
 
 /* Mobile screens */
 @media screen and (max-width: 768px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #socials-container {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+    }
+
+    .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    footer {
+        padding: 1rem;
+    }
+    
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+    .about-container h2,
+    .about-container p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .section-container {
+        width: 100%;
+        padding: 1rem;
+    }
+
     #contact,
     footer {
         height: auto; 
@@ -200,76 +254,7 @@ section {
     .logo {
         font-size: 1.5rem;
     }
-
-    #socials-container {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        padding: 1rem 0;
-        margin-bottom: 1rem;
-    }
     
-    .icon {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-    
-    footer {
-        padding: 1rem;
-    }
-    
-    .about-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        margin: 0 auto;
-        width: 90%;
-    }
-    
-    .about-container h2,
-    .about-container p {
-        font-size: 1rem;
-        text-align: center;
-    }
-    
-    .section-container {
-        width: 100%;
-        padding: 1rem;
-    }
-    
-    @media screen and (max-width: 600px) {
-        .newsletter-container {
-            max-width: 90%;
-            max-height: 300px;
-        }
-    
-        .nav-links {
-            font-size: 1.2rem;
-        }
-    
-        .section__text__p1,
-        .section__text__p2 {
-            font-size: 1.2rem;
-            max-width: 90%;
-        }
-    
-        .title {
-            font-size: 2rem;
-        }
-    
-        .skills-row,
-        .details-container {
-            flex-direction: column;
-        }
-    
-        .project-img,
-        .activity-img {
-            height: auto;
-        }
-    }
-
-    /* Specific styles for the About section */
     .about-section {
         max-width: 90%;
         margin: 0 auto; 
@@ -289,6 +274,23 @@ section {
 /* Landscape specific adjustments for iPhone 12 Pro and iPhone 14 Pro Max */
 @media screen and (max-width: 844px) and (orientation: landscape), 
        screen and (max-width: 932px) and (orientation: landscape) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
     #profile,
     .section-container {
         height: auto; /* Ensure containers are flexible */
@@ -326,32 +328,31 @@ section {
 /* FIX FOR SAMSUNG GALAXY S8+ PORTRAIT MODE */
 @media only screen and (min-width: 360px) and (max-width: 740px) and (orientation: portrait) {
     .contact-container {
-      padding: 0 20px; 
+        padding: 0 20px; 
     }
   
     .contact-text {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 100%; 
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%; 
     }
   
     .contact-info-upper-container {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 100%; 
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%; 
     }
   
     .contact-info-container {
-      text-align: center;
+        text-align: center;
     }
   
     h1.title {
-      text-align: center;
+        text-align: center;
     }
-  }
+}
 
-
-  /* FIXING SKILLS SECTION FOR MOBILE */
+/* FIXING SKILLS SECTION FOR MOBILE */
 @media screen and (max-width: 768px) {
     #skills {
         margin: 2rem 5%;
@@ -369,5 +370,138 @@ section {
     .skill-icon {
         width: 100px; 
         height: 100px;
+    }
+}
+
+/* Adjust the "About Me" section for portrait mobile devices */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .about-section {
+        width: 150%; /* Make the section wider */
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    .about-section h1,
+    .about-section p {
+        font-size: 1.2rem; /* Adjust font size if needed */
+    }
+
+    .section-container {
+        width: 150%;
+        padding: 1rem;
+    }
+}
+
+
+/* For portrait mode on mobile devices */
+@media (orientation: portrait) and (max-width: 768px) {
+    .activity-description {
+      width: 100%; 
+      padding: px; 
+    }
+    .activity-img {
+      width: 100%; 
+      height: auto; 
+    }
+    .activity-info {
+      flex-direction: column; 
+    }
+    .btn-container {
+      width: 100%; 
+      text-align: center; /* Center the button */
+    }
+  }
+
+  @media (orientation: portrait) and (max-width: 768px) {
+    .title {
+      font-size: 30px; 
+      white-space: nowrap; 
+    }
+    .section__text__p2 {
+      font-size: 18px; 
+    }
+  }
+
+/* Landscape mode for mobile devices and tablets */
+@media (orientation: landscape) and (max-width: 768px) {
+    #hamburger-nav {
+        display: none;
+    }
+
+    #desktop-nav {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #fff;
+    }
+
+    #desktop-nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    #desktop-nav li {
+        list-style: none;
+    }
+
+    #desktop-nav a {
+        text-decoration: none;
+        padding: 1rem;
+        font-size: 1rem;
+        color: black;
+    }
+
+    #desktop-nav a:hover {
+        background-color: #f0f0f0;
+        color: #c8e5ff;
+    }
+}
+
+/* Landscape mode for iPads and larger tablets */
+@media (orientation: landscape) and (min-width: 769px) and (max-width: 1024px) {
+    #hamburger-nav {
+        display: none;
+    }
+
+    #desktop-nav {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 1000;
+    }
+
+    #desktop-nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    #desktop-nav li {
+        list-style: none;
+    }
+
+    #desktop-nav a {
+        text-decoration: none;
+        color: black;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    #desktop-nav a:hover {
+        background-color: #f0f0f0;
+        color: #c8e5ff;
     }
 }
