@@ -718,7 +718,7 @@ body::after {
 /* BOLD NAV LINK FOR PAGE ACTIVE */
 .nav-links a.active,
 .menu-links a.active {
-    color: #c8e5ff; 
+    color: #000000; 
     font-weight: bold; 
 }
 
